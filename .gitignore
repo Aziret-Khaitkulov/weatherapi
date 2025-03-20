@@ -2,7 +2,6 @@ venv/
 requirements.txt
 *.log
 build/
-temp*
 __pycache__/
 *.pyc
 .pytest_cache/
