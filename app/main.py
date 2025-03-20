@@ -20,5 +20,5 @@ def weather(request: Request, city: str):
     """Эндпоинт для получения погоды по городу"""
     data = get_weather(city)
     if not data:
-        raise HTTPException(status_code=404, detail="Город не найден")
+        return templates.TemplateResponse("index.html", {"request": request, "error": "Город не найден"})
     return templates.TemplateResponse("index.html", {"request": request, "weather": data})
